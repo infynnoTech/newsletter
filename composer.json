@@ -1,0 +1,19 @@
+{
+    "name": "codeg/newsletter",
+    "description": "This package will store newsletter subscription to the database",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "codeg",
+            "email": "info@codeg.io"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Codeg\\Newsletter\\": "src/"
+        }
+    }
+}
