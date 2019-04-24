@@ -5,10 +5,12 @@
 Steps:
 
 1) composer require infynno/newsletter
-2) config/app.php <br/>
-        'providers' => [<br/>
-            ....<br/>
+2) config/app.php
+<pre>
+        'providers' => [
+            ....
 
             Infynno\Newsletter\NewsletterServiceProvider::class,
         ]
+</pre>
 3) php artisan migrate
