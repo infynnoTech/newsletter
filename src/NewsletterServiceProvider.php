@@ -3,7 +3,7 @@
  *
  */
 
-namespace Codeg\Newsletter;
+namespace Infynno\Newsletter;
 
 use Illuminate\Support\ServiceProvider;
 

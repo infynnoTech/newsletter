@@ -1,19 +1,19 @@
 {
-    "name": "codeg/newsletter",
+    "name": "infynno/newsletter",
     "description": "This package will store newsletter subscription to the database",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "codeg",
-            "email": "info@codeg.io"
+            "name": "infynno",
+            "email": "info@infynno.com"
         }
     ],
     "minimum-stability": "dev",
     "require": {},
     "autoload": {
         "psr-4": {
-            "Codeg\\Newsletter\\": "src/"
+            "Infynno\\Newsletter\\": "src/"
         }
     }
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Codeg\Newsletter\Http\Controllers;
+namespace Infynno\Newsletter\Http\Controllers;
 
-use Codeg\Newsletter\Models\NewsLetter;
-use Codeg\Newsletter\Mail\NewsletterMailable;
+use Infynno\Newsletter\Models\NewsLetter;
+use Infynno\Newsletter\Mail\NewsletterMailable;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Mail;

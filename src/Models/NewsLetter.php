@@ -1,6 +1,6 @@
 <?php
 
-namespace Codeg\Newsletter\Models;
+namespace Infynno\Newsletter\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

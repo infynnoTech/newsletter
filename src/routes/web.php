@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['namespace' => 'Codeg\Newsletter\Http\Controllers'],function(){
+Route::group(['namespace' => 'Infynno\Newsletter\Http\Controllers'],function(){
 
     Route::get('newsletter', 'NewsLetterController@index')->name('newsletter');
 

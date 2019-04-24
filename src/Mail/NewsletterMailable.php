@@ -1,6 +1,6 @@
 <?php
 
-namespace Codeg\Newsletter\Mail;
+namespace Infynno\Newsletter\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
