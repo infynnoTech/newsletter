@@ -4,7 +4,10 @@
 
 Steps:
 
-1) composer require infynno/newsletter
+1)We need to install package via composer
+<pre>
+    composer require infynno/newsletter
+</pre>
 2) config/app.php
 <pre>
         'providers' => [
@@ -13,4 +16,7 @@ Steps:
             Infynno\Newsletter\NewsletterServiceProvider::class,
         ]
 </pre>
-3) php artisan migrate
+3) run migration command for create table to database
+<pre>
+    php artisan migrate
+</pre>
