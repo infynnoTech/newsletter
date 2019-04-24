@@ -17,17 +17,17 @@ class NewsLetterController extends Controller
      */
     public function index()
     {
-        return view('newsletter::newsletter');
-    }
+        //calling news letter view
+        try {
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+            return view('newsletter::newsletter');
+
+        } catch (Exception $e) {
+
+           Log::error($e);
+
+           return response()->json(['status' => 0, 'message' => 'Something went wrong.'], 500);
+        }
     }
 
     /**
@@ -38,53 +38,20 @@ class NewsLetterController extends Controller
      */
     public function store(Request $request)
     {
-        Mail::to($request->email)->send(new NewsletterMailable($request->email));
-        NewsLetter::create($request->all());
-        return redirect(route('newsletter'));
+        try {
+            //send a thank you mail to subsctibed used
+            Mail::to($request->email)->send(new NewsletterMailable($request->email));
+            //insert in to data base subscriber email
+            NewsLetter::create($request->all());
+
+            return redirect(route('newsletter'));
+
+        } catch (Exception $e) {
+
+           Log::error($e);
+
+           return response()->json(['status' => 0, 'message' => 'Something went wrong.'], 500);
+        }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\NewsLetter  $newsLetter
-     * @return \Illuminate\Http\Response
-     */
-    public function show(NewsLetter $newsLetter)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\NewsLetter  $newsLetter
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(NewsLetter $newsLetter)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\NewsLetter  $newsLetter
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, NewsLetter $newsLetter)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\NewsLetter  $newsLetter
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(NewsLetter $newsLetter)
-    {
-        //
-    }
 }

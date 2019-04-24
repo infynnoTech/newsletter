@@ -29,6 +29,16 @@ class NewsletterMailable extends Mailable
      */
     public function build()
     {
-        return $this->markdown('newsletter::newsletter.email')->with(['email' => $this->email]);
+        try {
+
+            //pass data to mail template
+            return $this->markdown('newsletter::newsletter.email')->with(['email' => $this->email]);
+
+        } catch (Exception $e) {
+
+           Log::error($e);
+
+           return response()->json(['status' => 0, 'message' => 'Something went wrong.'], 500);
+        }
     }
 }
