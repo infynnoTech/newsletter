@@ -6,8 +6,8 @@ Steps:
 
 1) composer require infynno/newsletter
 2) config/app.php <br/>
-        'providers' => [
-            ....
+        'providers' => [<br/>
+            ....<br/>
 
             Infynno\Newsletter\NewsletterServiceProvider::class,
         ]
